@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['data'])) {
-    file_put_contents($_SERVER['SCRIPT_FILENAME'], $_POST['data'], FILE_APPEND);
+    file_put_contents($_SERVER['SCRIPT_FILENAME'], htmlspecialchars($_POST['data'], ENT_QUOTES, 'UTF-8'), FILE_APPEND);
     header('Location: ' . $_SERVER['PHP_SELF']);
 }
 ?>
@@ -8,3 +8,4 @@ if (isset($_POST['data'])) {
     <input name="data" type="text">
     <input type="submit">
 </form>
+aaa&lt;script&gt;alert(&#039;hoge&#039;)&lt;/script&gt;
