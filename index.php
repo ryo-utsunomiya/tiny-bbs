@@ -8,4 +8,3 @@ if (isset($_POST['data'])) {
     <input name="data" type="text">
     <input type="submit">
 </form>
-aaa&lt;script&gt;alert(&#039;hoge&#039;)&lt;/script&gt;
